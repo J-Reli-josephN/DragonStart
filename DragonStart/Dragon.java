@@ -1,4 +1,5 @@
 import java.awt.*;
+ 
 /**
  * Write a description of class Dragon here.
  *
@@ -12,6 +13,8 @@ public class Dragon
     private int y;
     private int size;
     private String talk; 
+    int[] hornx = {x + size * -10, x + size * -6, x + size * -5, x + size * -4, x + size * + 5};
+    int[] horny = {y + size * -25, y + size * -35, y + size * - 45, y + size * -35, y + size * -25};
 
     /**
      * Default Constructor for objects of class Dragon
@@ -41,16 +44,28 @@ public class Dragon
      * drawDragon(Graphics g)
      * Starting of drawing, complete your Dragon....
      */
-    public void drawDragon(Graphics g)
+    public void drawDragon(Graphics g)throws InterruptedException
     {
         g.fillRect(x, y , size * 60, size * 30);
+        Thread.sleep(200);
         g.fillRect(x + size * 60, y , size * 20, size * 25);
+        Thread.sleep(200);
         g.fillRect(x + size * 80, y , size * 30, size * 15);
+        Thread.sleep(200);
         g.fillRect(x + size * 110, y , size * 30, size * 8);
+        Thread.sleep(200);
         g.fillRect(x, y + size * 30, size * 22, size * 18);
+        Thread.sleep(200);
         g.fillRect(x + size * 36, y + size * 30, size * 23, size * 18);
+        Thread.sleep(200);
         g.fillRect(x, y + size * 48, size * 11, size * 18);
+        Thread.sleep(200);
         g.fillRect(x + size * 54, y + size * 48, size * 12, size * 18);
+        Thread.sleep(200);
+        g.fillRect(x + size * -50, y + size * -15, size * 30, size * 20);
+        Thread.sleep(200);
+        g.fillRect(x + size * -25, y + size * -25, size * 30, size * 30);
+        g.fillPolygon(hornx, horny, 5);
     }
     
     /**

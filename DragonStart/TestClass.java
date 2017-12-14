@@ -1,4 +1,5 @@
 import java.awt.*;
+ 
 /**
  * Write a description of class TestClass here.
  *
@@ -7,7 +8,7 @@ import java.awt.*;
  */
 public class TestClass
 {
-   public static void main(String args[]){
+   public static void main(String args[]) throws InterruptedException{
        DrawingPanel panel = new DrawingPanel(500,500);
        Graphics g = panel.getGraphics();
        
@@ -15,6 +16,8 @@ public class TestClass
        
        fam.drawDragon(g);
      
-       System.out.println(fam);
+       System.out.println("fam");
+       
+       
     }
 }
