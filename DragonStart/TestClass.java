@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.Scanner;
  
 /**
  * Write a description of class TestClass here.
@@ -9,7 +10,10 @@ import java.awt.*;
 public class TestClass
 {
    public static void main(String args[]) throws InterruptedException{
-       DrawingPanel panel = new DrawingPanel(500,500);
+       Scanner cc = new Scanner(System.in);
+       System.out.print("Hi, how big do you want your dragon: ");
+       int size = cc.nextInt();
+       DrawingPanel panel = new DrawingPanel(500 + size * 2, 500 + size * 2);
        Graphics g = panel.getGraphics();
        
        Dragon fam = new Dragon();
