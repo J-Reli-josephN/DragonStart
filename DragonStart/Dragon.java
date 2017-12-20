@@ -44,7 +44,7 @@ public class Dragon
      * drawDragon(Graphics g)
      * Starting of drawing, complete your Dragon....
      */
-    public void drawDragon(Graphics g)throws InterruptedException
+    public void drawDragon(Graphics g, int size)throws InterruptedException
     {
         g.fillRect(x, y , size * 60, size * 30);
         Thread.sleep(200);
