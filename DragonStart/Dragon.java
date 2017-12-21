@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.ArrayList;
  
 /**
  * Write a description of class Dragon here.
@@ -44,7 +45,7 @@ public class Dragon
      * drawDragon(Graphics g)
      * Starting of drawing, complete your Dragon....
      */
-    public void drawDragon(Graphics g, int size)throws InterruptedException
+    public void drawDragon(Graphics g, int size, ArrayList<Dragon> ragon)throws InterruptedException
     {
         g.fillRect(x, y , size * 60, size * 30);
         Thread.sleep(200);
@@ -63,6 +64,29 @@ public class Dragon
         g.fillRect(x + size * 54, y + size * 48, size * 12, size * 18);
         Thread.sleep(200);
         g.fillRect(x + size * -50, y + size * -15, size * 30, size * 20);
+        Thread.sleep(200);
+        g.fillRect(x + size * -25, y + size * -25, size * 30, size * 30);
+        g.fillPolygon(hornx, horny, 5);
+    }
+    public void drawDragon(Graphics g, int size,int xx, int yy, ArrayList<Dragon> ragon)throws InterruptedException
+    {
+        g.fillRect(xx, yy , size * 60, size * 30);
+        Thread.sleep(200);
+        g.fillRect(xx + size * 60, yy , size * 20, size * 25);
+        Thread.sleep(200);
+        g.fillRect(xx + size * 80, yy , size * 30, size * 15);
+        Thread.sleep(200);
+        g.fillRect(xx + size * 110, yy , size * 30, size * 8);
+        Thread.sleep(200);
+        g.fillRect(xx, yy + size * 30, size * 22, size * 18);
+        Thread.sleep(200);
+        g.fillRect(xx + size * 36, yy + size * 30, size * 23, size * 18);
+        Thread.sleep(200);
+        g.fillRect(xx, yy + size * 48, size * 11, size * 18);
+        Thread.sleep(200);
+        g.fillRect(xx + size * 54, yy + size * 48, size * 12, size * 18);
+        Thread.sleep(200);
+        g.fillRect(xx + size * -50, yy + size * -15, size * 30, size * 20);
         Thread.sleep(200);
         g.fillRect(x + size * -25, y + size * -25, size * 30, size * 30);
         g.fillPolygon(hornx, horny, 5);
