@@ -45,7 +45,7 @@ public class Dragon
      * drawDragon(Graphics g)
      * Starting of drawing, complete your Dragon....
      */
-    public void drawDragon(Graphics g, int size, ArrayList<Dragon> ragon)throws InterruptedException
+    public void drawDragon(Graphics g, int size)throws InterruptedException
     {
         g.fillRect(x, y , size * 60, size * 30);
         Thread.sleep(200);
@@ -67,9 +67,11 @@ public class Dragon
         Thread.sleep(200);
         g.fillRect(x + size * -25, y + size * -25, size * 30, size * 30);
         g.fillPolygon(hornx, horny, 5);
+        Thread.sleep(200);
     }
-    public void drawDragon(Graphics g, int size,int xx, int yy, ArrayList<Dragon> ragon)throws InterruptedException
+    public void drawDragon(Graphics g, int size,int xx, int yy, int size, ArrayList<Dragon> ragon)throws InterruptedException
     {
+        
         g.fillRect(xx, yy , size * 60, size * 30);
         Thread.sleep(200);
         g.fillRect(xx + size * 60, yy , size * 20, size * 25);
@@ -90,6 +92,7 @@ public class Dragon
         Thread.sleep(200);
         g.fillRect(x + size * -25, y + size * -25, size * 30, size * 30);
         g.fillPolygon(hornx, horny, 5);
+        
     }
     
     /**
